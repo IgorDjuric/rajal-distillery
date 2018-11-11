@@ -17,20 +17,20 @@ $(document).ready(function () {
         console.log(location.hash);
         $(location.hash).addClass('active');
 
-            if($(location.hash).hasClass('active')){
-                $('.fade').each(function (i) {
+        if ($(location.hash).hasClass('active')) {
+            $('.fade').each(function (i) {
 
-                    var bottom_of_object = $(this).position().top;
-                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+                var bottom_of_object = $(this).position().top;
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
 
-                    /* If the object is completely visible in the window, fade it it */
-                    if (bottom_of_window >= bottom_of_object) {
+                /* If the object is completely visible in the window, fade it it */
+                if (bottom_of_window >= bottom_of_object) {
 
-                        $(this).animate({'opacity': '1'}, 600);
+                    $(this).animate({'opacity': '1'}, 600);
 
-                    }
-                });
-            }
+                }
+            });
+        }
 
 
     }
@@ -57,36 +57,41 @@ $(document).ready(function () {
 
     // number counter
     var a = 0;
-    $(window).scroll(function() {
-        var oTop = $('.counter').offset().top - window.innerHeight;
-        if (a == 0 && $(window).scrollTop() > oTop) {
-            $('.counter-value').each(function() {
-                var $this = $(this),
-                    countTo = $this.attr('data-count');
-                $({
-                    countNum: $this.text()
-                }).animate({
-                        countNum: countTo
-                    },
-
-                    {
-
-                        duration: 2000,
-                        easing: 'swing',
-                        step: function() {
-                            $this.text(Math.floor(this.countNum));
+    $(window).scroll(function () {
+        if ($(".counter")[0]) {
+            var oTop = $('.counter').offset().top - window.innerHeight;
+            if (a == 0 && $(window).scrollTop() > oTop) {
+                $('.counter-value').each(function () {
+                    var $this = $(this),
+                        countTo = $this.attr('data-count');
+                    $({
+                        countNum: $this.text()
+                    }).animate({
+                            countNum: countTo
                         },
-                        complete: function() {
-                            $this.text(this.countNum);
-                            //alert('finished');
-                        }
 
-                    });
-            });
-            a = 1;
+                        {
+
+                            duration: 2000,
+                            easing: 'swing',
+                            step: function () {
+                                $this.text(Math.floor(this.countNum));
+                            },
+                            complete: function () {
+                                $this.text(this.countNum);
+                                //alert('finished');
+                            }
+
+                        });
+                });
+                a = 1;
+            }
         }
 
     });
+
+    var audio = document.getElementById("myAudio");
+    audio.volume = 0.5;
 });
 
 
@@ -135,5 +140,33 @@ function hasScrolled() {
 
     lastScrollTop = st;
 }
+
+
+
+//contact form
+$(function() {
+    var form = $('#myForm');
+
+    // var formMessages = $('#form-messages');
+
+    $(form).submit(function(event) {
+        // Stop the browser from submitting the form.
+        event.preventDefault();
+        var name = $("input#name").val();
+        var email = $("input#email").val();
+        var message = $("textarea#message").val();
+        $.ajax({
+            type: 'POST',
+            url: "../email.php",
+            data: {
+                name: name,
+                email: email,
+                message: message
+            }
+        })
+    });
+});
+
+
 
 
