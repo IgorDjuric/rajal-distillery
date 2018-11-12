@@ -90,16 +90,17 @@ $(document).ready(function () {
 
     });
 
+    //audio
     var audio = document.getElementById("myAudio");
     audio.volume = 0.5;
+
+
+
+
 });
 
 
-//Gallery
-$(document).on('click', '[data-toggle="lightbox"]', function (event) {
-    event.preventDefault();
-    $(this).ekkoLightbox({alwaysShowClose: true});
-});
+
 
 
 // Hide Header on on scroll down
@@ -168,5 +169,9 @@ $(function() {
 });
 
 
-
+//Gallery
+$(document).on('click', '[data-toggle="lightbox"]', function (event) {
+    event.preventDefault();
+    $(this).ekkoLightbox({alwaysShowClose: true});
+});
 

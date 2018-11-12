@@ -276,6 +276,12 @@ header {
 
 .gallery-row a {
     align-self: center;
+    transition: all 0.3s;
+
+}
+.gallery-row a:hover{
+    padding: 0px;
+    transition: all 0.3s;
 }
 
 .modal-body {
