@@ -45,11 +45,16 @@ header {
     width: 100%;
     z-index: 999;
 }
+header .container{
+    padding: 0;
+}
 #myAudio{
     z-index: 99999;
     position: fixed;
     right: 0;
     bottom: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 .nav-up {
     top: -40px;
@@ -184,6 +189,9 @@ header {
 .likeri img {
     border-radius: 10%;
 }
+.likeri h3{
+    text-align: right;
+}
 
 .product-bg-image {
     position: absolute;
@@ -202,7 +210,8 @@ header {
 }
 
 .selling-info-button a {
-    background-color: #d29932;
+    font-size: 20px;
+    background-color: #56292E;
     color: #fff;
     padding: 20px;
     border-radius: 50px;
@@ -211,7 +220,7 @@ header {
 }
 
 .selling-info-button a:hover {
-    background-color: #56292E;
+    background-color: #d29932;
     transition: 0.3s all;
 
 }
@@ -305,6 +314,9 @@ header {
 
 .quality {
     margin-top: 25vh;
+}
+.quality .certificates embed{
+    max-width: 100%;
 }
 
 /* Footer */
@@ -408,6 +420,9 @@ header {
     }
 }
 
-
+#selling tbody tr:hover{
+    background-color: #fff;
+    transition: all 0.3s;
+}
 
 

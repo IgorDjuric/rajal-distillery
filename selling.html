@@ -18,56 +18,69 @@
     <title>Hello, world!</title>
 </head>
 <body>
-<header>
-    <div class="row header-info py-1">
-        <div class="container">
-            <p class="mb-0">Rajal Distillery - Since 1999. - Kontaktirajte nas:
-                <i class="fas fa-phone ml-3"></i> +381 21 790 088
-                <i class="fas fa-phone ml-3"></i> +381 64 233 9564
-                <i class="far fa-envelope ml-3"></i> rajal.dunja@yahoo.com</p>
-        </div>
-    </div>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="img/logo/rajal-logo.jpg" alt="Rakija Rajal" height="60px"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item mr-2">
-                        <a class="nav-link" href="index.html"><i class="fas fa-home"></i></a>
-                    </li>
-                    <li class="nav-item mr-2">
-                        <a class="nav-link" href="index.html#products">Rakija i likeri</a>
-                    </li>
-                    <li class="nav-item mr-2">
-                        <a class="nav-link" href="index.html#about">O nama</a>
-                    </li>
-                    <li class="nav-item mr-2 active-link">
-                        <a class="nav-link" href="selling.html">Prodaja</a>
-                    </li>
-                    <li class="nav-item mr-2 ">
-                        <a class="nav-link " href="quality.html">Kvalitet i sertifikati</a>
-                    </li>
-                    <li class="nav-item mr-2">
-                        <a class="nav-link" href="gallery.html">Galerija</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#contact-us">Kontakt</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-
-
 <!--main content-->
 <div class="content selling">
+    <header>
+        <div class="row header-info py-2">
+            <div class="col-12">
+                <div class="container d-flex">
+                    <p class="mb-0">
+                        <span><i class="fas fa-phone ml-3"></i> +381 21 790 088</span>
+                        <span class="display-none-mobile"><i class="fas fa-phone ml-3 "></i> +381 64 233 9564</span>
+                        <span><i class="far fa-envelope ml-3"></i> rakijarajal@gmail.com</span></p>
+                    <a href="" class="ml-auto border-right-contact mr-2 pr-2">
+                        SR
+                    </a>
+                    <a href="">EN</a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo/rajal-logo.jpg" alt="Rakija Rajal" height="80px">
+                </a>
 
-    <img class="d-block w-100 full zoom" src="img/background.jpg" alt="Background">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mr-2 active-link">
+                            <a class="nav-link " href="index.html"><i class="fas fa-home"></i></a>
+                        </li>
+                        <li class="nav-item mr-2">
+                            <a class="nav-link" href="#products">Rakija i likeri</a>
+                        </li>
+                        <li class="nav-item mr-2">
+                            <a class="nav-link" href="#about">O nama</a>
+                        </li>
+                        <li class="nav-item mr-2">
+                            <a class="nav-link" href="selling.html">Prodaja</a>
+                        </li>
+                        <li class="nav-item mr-2">
+                            <a class="nav-link" href="quality.html">Kvalitet i sertifikati</a>
+                        </li>
+                        <li class="nav-item mr-2">
+                            <a class="nav-link" href="gallery.html">Galerija</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#contact-us">Kontakt</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--audio-->
+    <audio id="myAudio" src="track.mp3" autoplay loop controls>
+        <embed src="track.mp3" autostart="true" width="200" height="90" loop="true"></embed>
+    </audio>
+
+    <!--background img>-->
+    <img class="d-block w-100 full zoom background-image" src="img/background.jpg" alt="Background">
 
 
     <!-- Products -->
@@ -79,6 +92,63 @@
                 </div>
             </div>
 
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h3>Cenovnik</h3>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Proizvod</th>
+                            <th scope="col">Pakovanje</th>
+                            <th scope="col">Cena</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Rakija</td>
+                            <td>1L</td>
+                            <td>1200 din</td>
+                        </tr>
+                        <tr>
+                            <td>Rakija</td>
+                            <td>0.7L</td>
+                            <td>1000 din</td>
+                        </tr>
+                        <tr>
+                            <td>Rakija</td>
+                            <td>Kockaste boce lux 0.L</td>
+                            <td>1400 din</td>
+                        </tr>
+                        <tr>
+                            <td>Rakija</td>
+                            <td>0.5L</td>
+                            <td>700 din</td>
+                        </tr>
+                        <tr>
+                            <td>Rakija</td>
+                            <td>0.25L</td>
+                            <td>350 din</td>
+                        </tr>
+                        <tr>
+                            <td>Likeri</td>
+                            <td>0.7L</td>
+                            <td>1100 din</td>
+                        </tr>
+                        <tr>
+                            <td>Likeri</td>
+                            <td>0.5L</td>
+                            <td>800 din</td>
+                        </tr>
+                        <tr>
+                            <td>Likeri</td>
+                            <td>0.25L</td>
+                            <td>400 din</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p>Napomena: Cene su izražene bez uračunatog PDV-a koji iznosi 18%</p>
+                </div>
+            </div>
             <div class="row mb-5">
                 <div class="col-12">
                     <h3>Prodaja</h3>
