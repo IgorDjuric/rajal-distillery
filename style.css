@@ -372,7 +372,14 @@ header .container{
     width: 25%;
     background-color: #d29932;
 }
-
+.follow-us i{
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    text-align: center;
+}
 .footer-credits {
     background-color: #452125;
     color: #eee;
