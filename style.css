@@ -97,6 +97,25 @@ header .container{
     transition: 0.3s all;
     color: #D29932;
 }
+.product-links-toggle{
+    visibility: hidden;
+    background-color: #fff;
+    position: absolute;
+    right: 357px;
+    width: 200px;
+    top: 42px;
+}
+.selling-links-toggle{
+    visibility: hidden;
+    background-color: #fff;
+    position: absolute;
+    right: 166px;
+    width: 200px;
+    top: 42px;
+}
+.product-links-toggle a, .selling-links-toggle a{
+    color: #d29932;
+}
 
 .sale-info-circle {
     background-color: #fff;
@@ -160,7 +179,9 @@ header .container{
 #contact-us iframe {
     width: 100%;
 }
-
+#contact-us{
+    font-weight: bold;
+}
 #products {
     margin-top: 50vh;
 }
@@ -305,7 +326,9 @@ header .container{
     width: 100%;
     border-radius: 100%;
 }
-
+.border-radius-10{
+    border-radius: 10% !important;
+}
 /*Selling*/
 
 .selling {
@@ -378,6 +401,9 @@ header .container{
         width: unset !important;
         height: 100vh;
     }
+    .product-links-toggle, .selling-links-toggle{
+        display: none;
+    }
 }
 @media only screen and (max-width: 768px) {
     .display-none-mobile {
@@ -423,6 +449,12 @@ header .container{
 #selling tbody tr:hover{
     background-color: #fff;
     transition: all 0.3s;
+}
+#selling .company-info p{
+    margin-bottom: 0;
+}
+#selling .uplatnica img{
+    width: 100%;
 }
 
 
