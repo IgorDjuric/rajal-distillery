@@ -104,6 +104,17 @@ $(document).ready(function () {
     var audio = document.getElementById("myAudio");
     audio.volume = 0.5;
 
+
+    //mobile menu sublist toggle
+    $('.nav-item-selling-btn').click(function () {
+        $('.nav-item-selling-btn').toggleClass('fa-plus fa-minus');
+       $('.mobile-sub-links-selling').slideToggle();
+    });
+    $('.nav-item-products-btn').click(function () {
+        $('.nav-item-products-btn').toggleClass('fa-plus fa-minus');
+        $('.mobile-sub-links-products').slideToggle();
+    });
+
 });
 
 

@@ -19,13 +19,20 @@
     <title>Rajal Distillery - Najbolja domaća rakija!</title>
 </head>
 <body>
+
+<!--audio-->
+<audio id="myAudio" src="track.mp3" autoplay loop controls preload="auto"></audio>
+<!--background img>-->
+<img class="d-block w-100 full zoom background-image" src="img/background.jpg" alt="Background">
+
+
 <header>
     <div class="row header-info py-2">
         <div class="col-12">
             <div class="container d-flex">
                 <p class="mb-0">
-                    <span><i class="fas fa-phone ml-3"></i> +381 21 790 088</span>
-                    <span class="display-none-mobile"><i class="fas fa-phone ml-3 "></i> +381 64 233 9564</span>
+                    <span><i class="fas fa-phone ml-3"></i> +381 64 2339564</span>
+
                     <span><i class="far fa-envelope ml-3"></i> rakijarajal@gmail.com</span></p>
                 <a href="" class="ml-auto border-right-contact mr-2 pr-2">
                     <img src="img/flags/sr.png" alt="">
@@ -49,14 +56,45 @@
                     <li class="nav-item mr-2 ">
                         <a class="nav-link " href="index.html"><i class="fas fa-home"></i></a>
                     </li>
-                    <li class="nav-item mr-2 ">
-                        <a id="nav-link-products"class="nav-link" href="index.html#products">Rakija i Likeri</a>
+                    <li class="nav-item mr-2 d-block have-sublist">
+                        <div class="d-flex">
+                            <a id="nav-link-products" class="nav-link" href="index.html#products">Rakija i Likeri</a>
+                            <i class="fas fa-plus nav-item-products-btn"></i>
+                        </div>
+                        <ul class="list-unstyled ml-3 mt-3 mobile-sub-links-products">
+                            <li class="mb-2">
+                                <a href="index.html#products" class="text-white">Rakija od dunja</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="index.html#products-kajsija">Rakija od kajsija</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="index.html#products-viljamovka">Rakija viljamovka</a>
+                            </li>
+                            <li class="mb-1">
+                                <a href="index.html#products-likeri">Likeri</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav-item mr-2">
                         <a class="nav-link" href="index.html#about">O nama</a>
                     </li>
-                    <li class="nav-item mr-2 active-link">
-                        <a id="nav-link-selling" class="nav-link" href="selling.html">Prodaja</a>
+                    <li class="nav-item mr-2 d-block active-link have-sublist">
+                        <div class="d-flex">
+                            <a id="nav-link-selling" class="nav-link" href="selling.html">Prodaja</a>
+                            <i class="fas fa-plus nav-item-selling-btn"></i>
+                        </div>
+                        <ul class="list-unstyled ml-3 mt-3 mobile-sub-links-selling">
+                            <li class="mb-2">
+                                <a href="#selling" class="text-white">Prodaja i distribucija</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#marketing">Marketing</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#price-list">Cenovnik</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav-item mr-2">
                         <a class="nav-link" href="quality.html">Kvalitet i sertifikati</a>
@@ -89,12 +127,6 @@
 <!--main content-->
 <div class="content selling">
 
-    <!--audio-->
-    <audio id="myAudio" src="track.mp3" autoplay loop controls preload="auto"></audio>
-
-    <!--background img>-->
-    <img class="d-block w-100 full zoom background-image" src="img/background.jpg" alt="Background">
-
     <!--selling info-->
     <section id="selling" class="py-5">
         <div class="container p-5 bg-white-transparent">
@@ -104,44 +136,52 @@
                 </div>
             </div>
 
-            <div  class="row mb-5">
+            <div class="row mb-5">
                 <div class="col-12">
                     <h3>Informacije o prodaji</h3>
                     <p>Naše proizvode možete naručiti direktno u sedištu kompanije u Vrbasu ili preko ovlašćenih
                         distributera. Ovde pre svega mislimo na naše korisnike – pravna lica, koji su registrovani za
-                        maloprodaju ili ugostiteljsku I uslužnu delatnost.</p>
+                        maloprodaju ili ugostiteljsku i uslužnu delatnost.</p>
                     <p>Odredjeni proizvod se pakuje u kartonsku ambalažu od po 6 standardnih proizvoda od 1 L,
-                        0,75 L, 0,5 L ili 0,25 L. Kartoni se dalje pakuju na standardne euro palete I distribuiraju sopstvenim ili našim
+                        0,75 L, 0,5 L ili 0,25 L. Kartoni se dalje pakuju na standardne euro palete I distribuiraju
+                        sopstvenim ili našim
                         prevoznim sredstvima. Za kupce iz inostranstva je obezbeđen kompletan spoljnotrgovinski
-                        institut izvozno uvoznog carinjenja I otpremanja robe u naznačenu zemlju kupca.</p>
+                        institut izvozno uvoznog carinjenja i otpremanja robe u naznačenu zemlju kupca.</p>
                     <p>Za fizička lica, koji predstavljaju novu ciljnu grupu u razvoju prodaje na teritoriji
                         Srbije, obezbeđen je institute on line plaćanja i distribucije, korišćenjem aplikacije
-                        m-bankinga ili
-                        pouzećem gde se nakon isporuke na naznačenu adresu, direktno plaća dostavljaču za naručenu
-                        robu.</p>
-                    <p><strong>Maloprodaja proizvoda online</strong> koristi proizvode I razne aplikacije poslovnih banaka, tako da je uvedena mogućnost plaćanja I automatske narudžbenice putem mobilnih telefona uz korišćenje klasičnog instituta plaćanja preko odgovarajuće mobilne aplikacije. Nakon registracije uplate na naznačeni tekući račun RAJAL DISTILLERY od strane fizičkog ili pravnog lica,vrši se distribucija proizvoda putem ovlašćenih prodajnih menadžera, ovlašćenih distributera ili putem organizovane postojeće kurirske mreže door to door.</p>
+                        m-bankinga ili pouzećem gde se nakon isporuke na naznačenu adresu, direktno plaća dostavljaču za
+                        naručenu robu.</p>
+                    <p><strong>Maloprodaja proizvoda online</strong> koristi proizvode i razne aplikacije poslovnih
+                        banaka, tako da je uvedena mogućnost plaćanja i automatske narudžbenice putem mobilnih telefona
+                        uz korišćenje klasičnog instituta plaćanja preko odgovarajuće mobilne aplikacije. Nakon
+                        registracije uplate na naznačeni tekući račun RAJAL DISTILLERY od strane fizičkog ili pravnog
+                        lica, vrši se distribucija proizvoda putem ovlašćenih prodajnih menadžera, ovlašćenih
+                        distributera ili putem organizovane postojeće kurirske mreže door to door.</p>
                 </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 company-info">
-                        <h4>Podaci o kompaniji</h4>
-                        <p><strong>Poslovno ime:</strong> RAJAL DISTILLERY DOO VRBAS</p>
-                        <p><strong>Adresa: </strong>Sivč Jovgena bb, 21460 Vrbas</p>
-                        <p><strong>Pretežna delatnost:</strong> 1101 – Destilacija, prečiščavanje i mešanje pića</p>
-                        <p><strong>Matični broj:</strong> 21086444</p>
-                        <p><strong>PIB:</strong> 108882218</p>
-                        <p><strong>Tekući račun u banci INTESA:</strong><br>
+                <div class="col-lg-6 col-md-12 col-sm-12 company-info">
+                    <h4>Podaci o kompaniji</h4>
+                    <p><strong>Poslovno ime:</strong> RAJAL DISTILLERY DOO VRBAS</p>
+                    <p><strong>Adresa: </strong>Sivč Jovgena bb, 21460 Vrbas</p>
+                    <p><strong>Pretežna delatnost:</strong> 1101 – Destilacija, prečiščavanje i mešanje pića</p>
+                    <p><strong>Matični broj:</strong> 21086444</p>
+                    <p><strong>PIB:</strong> 108882218</p>
+                    <p><strong>Tekući račun u banci INTESA:</strong><br>
 
-                            160-0053400017510-47<br>
+                        160-0053400017510-47<br>
 
-                            160-0000000423702-58</p>
-                        <p><strong>Odgovorno lice:</strong> Stevan Bobić i Miloš Mijatović</p>
-                        <p><strong>Telefon:</strong> +381 21 790088</p>
-                        <p><strong>Email:</strong> rakijarajal@gmail.com</p>
-                    </div>
+                        160-0000000423702-58</p>
+                    <p><strong>Odgovorno lice:</strong> Stevan Bobić i Miloš Mijatović</p>
+                    <p><strong>Telefon:</strong> +381 21 790088</p>
+                    <p><strong>Email:</strong> rakijarajal@gmail.com</p>
+                </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 uplatnica">
                     <h4>Uplatnica</h4>
                     <img src="img/uplatnica.jpg" alt="">
-                </div>
+                    <p class="mb-1"><strong>Primeri za svrhu uplate:</strong></p>
+                    <p class="mb-0">Svrha uplate: Kupovovina rakije od dunje 1 L, 2 x komada</p>
+                    <p>Svrha uplate: Kupovovina likera od kajsije 1 L, 3 x komada</p>
 
+                </div>
             </div>
 
             <div class="row mb-5">
@@ -169,31 +209,31 @@
                         intencije i inperativa pojedinih kompanija i globalnog finansijskog tržišta i finansijskih
                         institucija za brzim, efikasnim i jednostavnim protokom kapitala, usluga i roba, maksimiziranje
                         profita, kao i smanjenje transakcionih i troškova distribucije. Taj imperativ nameće bitnu ulogu
-                        marketinga u kompaniji,čija uloga je osim motivacionog i faktor koordinacije na tržištu. Takođe,
-                        brz i dinamičan razvoj informacionih tehnologija, pre svega interneta i elektronskih
+                        marketinga u kompaniji, čija uloga je osim motivacionog i faktor koordinacije na tržištu.
+                        Takođe, brz i dinamičan razvoj informacionih tehnologija, pre svega interneta i elektronskih
                         komunikacija, dovodi do značajnih promena u finansijskom sektoru,pa se paralelno razvijaja i
-                        elektronsko poslovanje,koje se oslanja na informacioni sistem,te je samim tim, pozicija i uloga
-                        kompanije i njenog marketinga prilično kompleksna i zahtevna i podrazumeva, pored sposobnosti da
-                        motiviše i animira potencijalne kupce i poznavanje i šerovanje baze podataka, koja je dostupna
-                        na lokalnoj ili globalnoj mreži. Sve veća konkurencija na tržištu i smanjenje transacionih
-                        troškova i marži i pojava elektronskog poslovanja još više ističe ulogu menadžera u marketingu
-                        kao lidera u pokušaju da poslovne aktivnosti kompanije podrede i stave u funkciju potencijalnim
-                        kupcima, te da to obavljaju na fleksibilniji i efikasniji način. Prednosti marketinga u sistemu
-                        elektronskog poslovanja se odnose se na automatizaciju procesa, smanjenje troškova, jednostavan
-                        i jeftin izlaz na šire tržište uz efikasno komuniciranje sa kupcima – korisnicima interneta,
-                        kojima je dostupniji spektar jeftinijih proizvoda i ponuda, uz veliku uštedu vremena za
-                        pretraživanje i kupovinu. Samim tim, uloga menadžera u marketingu, kao lidera u nekoj
-                        kompaniji, koja želi da se pozicionira na regionalnom i globalnom tržištu je izuzetno značajna i
-                        zahteva stalnu aktivnost na polju usavršavanja i osavremenjavanja znanja i proučavanju novih
-                        tehnologija i pristupa tržištu proizvoda, kapitala, kupaca i rada, kao i novih saznanja u oblasti
-                        komunikacije, odnosa sa zaposlenim i PR-a. Takav savremeni pristup ovoj naučnoj paradigmi je
-                        usvojen od strane RAJAL DISTILLERY, te je trenutno organizovana kampanja da se putem IT sektora
-                        informacije o proizvodnoj paleti što više približi kupcu I krajnjem potrošaču.</p>
-
+                        elektronsko poslovanje, koje se oslanja na informacioni sistem, te je samim tim, pozicija i
+                        uloga kompanije i njenog marketinga prilično kompleksna i zahtevna i podrazumeva, pored
+                        sposobnosti da motiviše i animira potencijalne kupce i poznavanje i šerovanje baze podataka,
+                        koja je dostupna na lokalnoj ili globalnoj mreži. Sve veća konkurencija na tržištu i smanjenje
+                        transacionih troškova i marži i pojava elektronskog poslovanja još više ističe ulogu menadžera u
+                        marketingu kao lidera u pokušaju da poslovne aktivnosti kompanije podrede i stave u funkciju
+                        potencijalnim kupcima, te da to obavljaju na fleksibilniji i efikasniji način. Prednosti
+                        marketinga u sistemu elektronskog poslovanja se odnose se na automatizaciju procesa, smanjenje
+                        troškova, jednostavan i jeftin izlaz na šire tržište uz efikasno komuniciranje sa kupcima –
+                        korisnicima interneta, kojima je dostupniji spektar jeftinijih proizvoda i ponuda, uz veliku
+                        uštedu vremena za pretraživanje i kupovinu. Samim tim, uloga menadžera u marketingu, kao lidera
+                        u nekoj kompaniji, koja želi da se pozicionira na regionalnom i globalnom tržištu je izuzetno
+                        značajna i zahteva stalnu aktivnost na polju usavršavanja i osavremenjavanja znanja i
+                        proučavanju novih tehnologija i pristupa tržištu proizvoda, kapitala, kupaca i rada, kao i novih
+                        saznanja u oblasti komunikacije, odnosa sa zaposlenim i PR-a. Takav savremeni pristup ovoj
+                        naučnoj paradigmi je usvojen od strane RAJAL DISTILLERY, te je trenutno organizovana kampanja da
+                        se putem IT sektora informacije o proizvodnoj paleti što više približi kupcu I krajnjem
+                        potrošaču.</p>
                 </div>
             </div>
 
-            <div id="price-list" class="row mb-5" >
+            <div id="price-list" class="row mb-5">
                 <div class="col-12">
                     <h3>Cenovnik</h3>
                     <table class="table">
@@ -247,7 +287,8 @@
                         </tr>
                         </tbody>
                     </table>
-                    <p><strong>Napomena:</strong> Cene su izražene sa uračunatim <strong>PDV-om</strong> koji iznosi <strong>20%</strong></p>
+                    <p><strong>Napomena:</strong> Cene su izražene sa uračunatim <strong>PDV-om</strong> koji iznosi
+                        <strong>20%</strong></p>
                 </div>
             </div>
         </div>
@@ -265,9 +306,9 @@
             <div class="row text-center mb-5">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-12 border-right-contact">
                     <i class="fas fa-phone "></i>
-                    <p>+381 62 666 800</p>
-                    <p>+381 62 777 800</p>
-                    <p>+381 62 800 800</p>
+                    <p>+381 64 2339564</p>
+                    <p>+381 63 7319158</p>
+                    <p>+381 21 790088</p>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-12 border-right-contact">
                     <i class="fas fa-home"></i>
@@ -309,68 +350,72 @@
         </div>
     </section>
 
-    <footer>
-        <div class="footer-wrapper py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-                        <h4>Podaci o kompaniji</h4>
-                        <div class="footer-line my-3"></div>
-                        <p><strong>Poslovno ime:</strong> RAJAL DISTILLERY DOO VRBAS</p>
-                        <p><strong>Adresa: </strong>Sivč Jovgena bb, 21460 Vrbas</p>
-                        <p><strong>Pretežna delatnost:</strong> 1101 – Destilacija, prečiščavanje i mešanje pića</p>
-                        <p><strong>Matični broj:</strong> 21086444</p>
-                        <p><strong>PIB:</strong> 108882218</p>
-                        <p><strong>Tekući račun u banci INTESA:</strong><br>
+</div>
 
-                            160-0053400017510-47<br>
+<footer>
+    <div class="footer-wrapper py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <h4>Podaci o kompaniji</h4>
+                    <div class="footer-line my-3"></div>
+                    <p><strong>Poslovno ime:</strong> RAJAL DISTILLERY DOO VRBAS</p>
+                    <p><strong>Adresa: </strong>Sivč Jovgena bb, 21460 Vrbas</p>
+                    <p><strong>Pretežna delatnost:</strong> 1101 – Destilacija, prečiščavanje i mešanje pića</p>
+                    <p><strong>Matični broj:</strong> 21086444</p>
+                    <p><strong>PIB:</strong> 108882218</p>
+                    <p><strong>Tekući račun u banci INTESA:</strong><br>
 
-                            160-0000000423702-58</p>
-                        <p><strong>Odgovorno lice:</strong> Stevan Bobić i Miloš Mijatović</p>
-                        <p><strong>Telefon:</strong> +381 21 790088</p>
-                        <p><strong>Email:</strong> rakijarajal@gmail.com</p>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-                        <h4>Linkovi</h4>
-                        <div class="footer-line my-3"></div>
-                        <div class="row">
-                            <div class="col">
-                                <p><a href="index.html#products">Rakija i likeri</a></p>
-                                <p><a href="index.html#products">Rakija od dunja</a></p>
-                                <p><a href="index.html#products-kajsija">Rakija od kajsija</a></p>
-                                <p><a href="index.html#products-viljamovka">Rakija viljamovka</a></p>
-                                <p><a href="index.html#products-likeri">Likeri od dunje, kajsije i kruške</a></p>
+                        160-0053400017510-47<br>
 
-                            </div>
-                            <div class="col">
-                                <p><a href="index.html#about">O nama</a></p>
-                                <p><a href="index.html#about-tradition">Tradicija</a></p>
-                                <p><a href="index.html#about-medals">Medalje i priznanja</a></p>
-                                <p><a href="index.html#production-process">Proces proizvodnje</a></p>
-                                <p><a href="quality.html">Kvalitet i sertifikati</a></p>
-                                <p><a href="gallery.html">Galerija</a></p>
-                            </div>
-                            <div class="col">
-                                <p><a href="#selling">Prodaja</a></p>
-                                <p><a href="#selling">Distribucija</a></p>
-                                <p><a href="#marketing">Marketing</a></p>
-                                <p><a href="#price-list">Cenovnik</a></p>
-                            </div>
+                        160-0000000423702-58</p>
+                    <p><strong>Odgovorno lice:</strong> Stevan Bobić i Miloš Mijatović</p>
+                    <p><strong>Telefon:</strong> +381 21 790088</p>
+                    <p><strong>Email:</strong> rakijarajal@gmail.com</p>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <h4>Linkovi</h4>
+                    <div class="footer-line my-3"></div>
+                    <div class="row">
+                        <div class="col">
+                            <p><a href="index.html#products">Rakija i likeri</a></p>
+                            <p><a href="index.html#products">Rakija od dunja</a></p>
+                            <p><a href="index.html#products-kajsija">Rakija od kajsija</a></p>
+                            <p><a href="index.html#products-viljamovka">Rakija viljamovka</a></p>
+                            <p><a href="index.html#products-likeri">Likeri od dunje, kajsije i kruške</a></p>
+
                         </div>
-                        <div class="row mt-2 follow-us">
-                            <div class="col-12">
-                                <h4>Pratite nas na Facebook-u:</h4>
-                                <a href="https://www.facebook.com/RajalDistillery/"><i class="fab fa-facebook-f"></i></a>
-                            </div>
+                        <div class="col">
+                            <p><a href="index.html#about">O nama</a></p>
+                            <p><a href="index.html#about-tradition">Tradicija</a></p>
+                            <p><a href="index.html#about-medals">Medalje i priznanja</a></p>
+                            <p><a href="index.html#production-process">Proces proizvodnje</a></p>
+                            <p><a href="quality.html">Kvalitet i sertifikati</a></p>
+                            <p><a href="gallery.html">Galerija</a></p>
+                        </div>
+                        <div class="col">
+                            <p><a href="#selling">Prodaja</a></p>
+                            <p><a href="#selling">Distribucija</a></p>
+                            <p><a href="#marketing">Marketing</a></p>
+                            <p><a href="#price-list">Cenovnik</a></p>
+                        </div>
+                    </div>
+                    <div class="row mt-2 follow-us">
+                        <div class="col-12">
+                            <h4>Pratite nas na Facebook-u:</h4>
+                            <a href="https://www.facebook.com/RajalDistillery/"><i
+                                    class="fab fa-facebook-f"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer-credits"><p>© 2018 Copyright: Igor Djuric</p></div>
-    </footer>
+    </div>
+    <div class="footer-credits"><p>© 2018 Copyright: Igor Djuric</p></div>
+</footer>
 
-</div>
+
+
 
 <script
         src="https://code.jquery.com/jquery-3.3.1.js"

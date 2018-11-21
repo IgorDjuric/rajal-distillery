@@ -113,10 +113,28 @@ header .container{
     width: 200px;
     top: 42px;
 }
+.have-sublist i{
+    display: none;
+}
 .product-links-toggle a, .selling-links-toggle a{
     color: #d29932;
 }
-
+.mobile-sub-links-selling, .mobile-sub-links-products{
+    display: none;
+}
+.mobile-sub-links-selling a, .mobile-sub-links-products a{
+    color: #fff !important;
+    border: none !important;
+}
+.nav-item-selling-btn, .nav-item-products-btn{
+    align-self: center;
+    color: #fff;
+    margin-left: auto;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+}
 .sale-info-circle {
     background-color: #fff;
     border: 1px solid #D29932;
@@ -410,6 +428,9 @@ header .container{
     }
     .product-links-toggle, .selling-links-toggle{
         display: none;
+    }
+    .have-sublist i{
+        display: inherit;
     }
 }
 @media only screen and (max-width: 768px) {
