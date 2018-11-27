@@ -1,13 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="sr">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-    <title itemprop="name">Rajal Distillery - Najbolja domaća rakija!Rajal Distillery</title>
-    <meta name="description" content="Destilarija rakije Kula Srbija">
-    <meta name="description"
-          content="Dobrodošli na zvaničnu internet prezentaciju „Rajal Distillery“! Na prvom mestu nam je briga o našim kupcima, ljubiteljima i uživaocima u „Rajal“ proizvodima.">
+    <title itemprop="name">Rajal Distillery - Najbolja domaća rakija! Rakija Rajal</title>
+    <meta name="description" content="Dobrodošli na zvaničnu internet prezentaciju „Rajal Distillery“! Na prvom mestu nam je briga o našim kupcima, ljubiteljima i uživaocima u „Rajal“ proizvodima.">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -16,13 +14,12 @@
           integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/favicon.ico">
-    <title>Rajal Distillery - Najbolja domaća rakija!</title>
 </head>
+
 <body>
 
 <!--audio-->
-<audio id="myAudio" src="track.mp3" autoplay="true" loop="true" controls ></audio>
-
+<audio id="myAudio" src="track.mp3" autoplay loop controls preload="auto"></audio>
 <!--background img>-->
 <img class="d-block w-100 full zoom background-image" src="img/background.jpg" alt="Background">
 
@@ -32,7 +29,7 @@
         <div class="col-12">
             <div class="container d-flex">
                 <p class="mb-0">
-                    <span><i class="fas fa-phone ml-3"></i> +381 64 2339564</span>
+                    <span><i class="fas fa-phone"></i> +381 64 2339564</span>
                     <span><i class="far fa-envelope ml-3"></i> rakijarajal@gmail.com</span></p>
                 <a href="" class="ml-auto border-right-contact mr-2 pr-2">
                     <img src="img/flags/sr.png" alt="">
@@ -47,18 +44,17 @@
                 <img src="img/logo/rajal-logo.jpg" alt="Rakija Rajal" height="80px">
             </a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler hamburger" type="button">
                 <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
             </button>
-            <div class="collapse navbar-collapse position-relative" id="navbarNav">
+            <div class="collapse navbar-collapse position-relative" id="mobileNav">
                 <ul class="navbar-nav ml-auto ">
-                    <li class="nav-item mr-2 ">
+                    <li class="nav-item mr-2">
                         <a class="nav-link " href="index.html"><i class="fas fa-home"></i></a>
                     </li>
                     <li class="nav-item mr-2 d-block have-sublist">
                         <div class="d-flex">
-                            <a id="nav-link-products" class="nav-link" href="selling.html">Rakija i Likeri</a>
+                            <a id="nav-link-products" class="nav-link" href="index.html#products">Rakija i Likeri</a>
                             <i class="fas fa-plus nav-item-products-btn"></i>
                         </div>
                         <ul class="list-unstyled ml-3 mt-3 mobile-sub-links-products">
@@ -81,7 +77,7 @@
                     </li>
                     <li class="nav-item mr-2 d-block have-sublist">
                         <div class="d-flex">
-                            <a id="nav-link-selling" class="nav-link" href="index.html#products">Rakija i Likeri</a>
+                            <a id="nav-link-selling" class="nav-link" href="selling.html">Prodaja</a>
                             <i class="fas fa-plus nav-item-selling-btn"></i>
                         </div>
                         <ul class="list-unstyled ml-3 mt-3 mobile-sub-links-selling">
@@ -96,7 +92,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item mr-2 ">
+                    <li class="nav-item mr-2">
                         <a class="nav-link" href="quality.html">Kvalitet i sertifikati</a>
                     </li>
                     <li class="nav-item mr-2 active-link">
@@ -114,7 +110,7 @@
                 </div>
 
                 <div class="selling-links-toggle px-3 py-1">
-                    <a href="selling.html#selling" class="d-block py-2">Prodaja i distribucija</a>
+                    <a href="selling.html" class="d-block py-2">Prodaja i distribucija</a>
                     <a href="selling.html#marketing" class="d-block py-2">Marketing</a>
                     <a href="selling.html#price-list" class="d-block py-2">Cenovnik</a>
                 </div>
@@ -266,9 +262,6 @@
                     <p><strong>Matični broj:</strong> 21086444</p>
                     <p><strong>PIB:</strong> 108882218</p>
                     <p><strong>Tekući račun u banci INTESA:</strong><br>
-
-                        160-0053400017510-47<br>
-
                         160-0000000423702-58</p>
                     <p><strong>Odgovorno lice:</strong> Stevan Bobić i Miloš Mijatović</p>
                     <p><strong>Telefon:</strong> +381 21 790088</p>
@@ -290,7 +283,7 @@
                             <p><a href="index.html#about">O nama</a></p>
                             <p><a href="index.html#about-tradition">Tradicija</a></p>
                             <p><a href="index.html#about-medals">Medalje i priznanja</a></p>
-                            <p><a href="index.html#production-process">Proces proizvodnje</a></p>
+                            <!--<p><a href="index.html#production-process">Proces proizvodnje</a></p>-->
                             <p><a href="quality.html">Kvalitet i sertifikati</a></p>
                             <p><a href="gallery.html">Galerija</a></p>
                         </div>

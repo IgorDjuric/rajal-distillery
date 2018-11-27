@@ -115,6 +115,41 @@ $(document).ready(function () {
         $('.mobile-sub-links-products').slideToggle();
     });
 
+    // $('.navbar-toggler').click(function () {
+    //     $('#navbarNav a').slideToggle();
+    // });
+    $('.hamburger').click(function () {
+        $('.hamburger i').toggleClass('fa-bars fa-times');
+        $('#mobileNav').slideToggle();
+        $('#mobileNav').addClass('open');
+    });
+    $('#mobileNav a').click(function () {
+       if($('#mobileNav').hasClass('open')){
+           $('#mobileNav').slideToggle();
+           $('#mobileNav').removeClass('open');
+           $('.hamburger i').toggleClass('fa-bars fa-times');
+       }
+    });
+
+    $("#myForm .send-message-btn").click(function() {
+        // var name = $("#name").val();
+        // var email = $("#email").val();
+        // var text = $("#message").val();
+        // var dataString = 'name='+ name + '&email=' + email + '&text=' + text;
+
+        $.ajax({
+            type: "POST",
+            url: "email.php",
+            data: $(form).serialize(),
+            success: function(){
+                $('.success').fadeIn(1000);
+            }
+        });
+
+        return false;
+    });
+
+
 });
 
 
