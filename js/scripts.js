@@ -8,7 +8,7 @@ $(document).ready(function () {
             $('html, body').animate({
                 scrollTop: $(hash).offset().top - 90
             }, 800, function () {
-                    window.location.hash = hash;
+                window.location.hash = hash;
             });
         }
     });
@@ -26,7 +26,7 @@ $(document).ready(function () {
                 /* If the object is completely visible in the window, fade it it */
                 if (bottom_of_window >= bottom_of_object) {
 
-                    $(this).animate({'opacity': '1'}, 500);
+                    $(this).animate({'opacity': '1'}, 500).animate({down: '50px'}, "fast");
 
                 }
             });
@@ -90,15 +90,31 @@ $(document).ready(function () {
 
     });
 
-    $("#nav-link-products").mouseover(function() { $(".product-links-toggle").css('visibility','visible'); });
-    $("#nav-link-products").mouseout(function() { $(".product-links-toggle").css('visibility','hidden'); });
-    $(".product-links-toggle").mouseover(function() { $(".product-links-toggle").css('visibility','visible'); });
-    $(".product-links-toggle").mouseout(function() { $(".product-links-toggle").css('visibility','hidden'); });
+    $("#nav-link-products").mouseover(function () {
+        $(".product-links-toggle").css('visibility', 'visible');
+    });
+    $("#nav-link-products").mouseout(function () {
+        $(".product-links-toggle").css('visibility', 'hidden');
+    });
+    $(".product-links-toggle").mouseover(function () {
+        $(".product-links-toggle").css('visibility', 'visible');
+    });
+    $(".product-links-toggle").mouseout(function () {
+        $(".product-links-toggle").css('visibility', 'hidden');
+    });
 
-    $("#nav-link-selling").mouseover(function() { $(".selling-links-toggle").css('visibility','visible'); });
-    $("#nav-link-selling").mouseout(function() { $(".selling-links-toggle").css('visibility','hidden'); });
-    $(".selling-links-toggle").mouseover(function() { $(".selling-links-toggle").css('visibility','visible'); });
-    $(".selling-links-toggle").mouseout(function() { $(".selling-links-toggle").css('visibility','hidden'); });
+    $("#nav-link-selling").mouseover(function () {
+        $(".selling-links-toggle").css('visibility', 'visible');
+    });
+    $("#nav-link-selling").mouseout(function () {
+        $(".selling-links-toggle").css('visibility', 'hidden');
+    });
+    $(".selling-links-toggle").mouseover(function () {
+        $(".selling-links-toggle").css('visibility', 'visible');
+    });
+    $(".selling-links-toggle").mouseout(function () {
+        $(".selling-links-toggle").css('visibility', 'hidden');
+    });
 
     //audio
     var audio = document.getElementById("myAudio");
@@ -108,7 +124,7 @@ $(document).ready(function () {
     //mobile menu sublist toggle
     $('.nav-item-selling-btn').click(function () {
         $('.nav-item-selling-btn').toggleClass('fa-plus fa-minus');
-       $('.mobile-sub-links-selling').slideToggle();
+        $('.mobile-sub-links-selling').slideToggle();
     });
     $('.nav-item-products-btn').click(function () {
         $('.nav-item-products-btn').toggleClass('fa-plus fa-minus');
@@ -124,36 +140,63 @@ $(document).ready(function () {
         $('#mobileNav').addClass('open');
     });
     $('#mobileNav a').click(function () {
-       if($('#mobileNav').hasClass('open')){
-           $('#mobileNav').slideToggle();
-           $('#mobileNav').removeClass('open');
-           $('.hamburger i').toggleClass('fa-bars fa-times');
-       }
+        if ($('#mobileNav').hasClass('open')) {
+            $('#mobileNav').slideToggle();
+            $('#mobileNav').removeClass('open');
+            $('.hamburger i').toggleClass('fa-bars fa-times');
+        }
     });
 
-    $("#myForm .send-message-btn").click(function() {
-        // var name = $("#name").val();
-        // var email = $("#email").val();
-        // var text = $("#message").val();
-        // var dataString = 'name='+ name + '&email=' + email + '&text=' + text;
+    function validateForm() {
+        var valid = true;
+        if ($("#name").val() == '') {
+            $("#name").addClass('empty-field');
+            valid = false;
+        }
+        if ($("#email").val() == '') {
+            $("#email").addClass('empty-field');
+            valid = false;
+        }
+        if ($("#message").val() == '') {
+            $("#message").addClass('empty-field');
+            valid = false;
+        }
 
-        $.ajax({
-            type: "POST",
-            url: "email.php",
-            data: $(form).serialize(),
-            success: function(){
-                $('.success').fadeIn(1000);
-            }
-        });
+        return valid;
+    }
 
-        return false;
+    $("#myForm").submit(function (e) {
+        e.preventDefault();
+        if (validateForm()) {
+            $.ajax({
+                type: "POST",
+                url: "email.php",
+                data: $('form').serialize(),
+                success: function () {
+                    $('.success').toggle();
+                    $('.success').animate({'opacity': '1'}, 500);
+                },
+                error:function (){}
+            });
+
+            $("#name").val('');
+            $("#name").removeClass('empty-field');
+            $("#email").val('');
+            $("#email").removeClass('empty-field');
+            $("#message").val('');
+            $("#message").removeClass('empty-field');
+
+            return false;
+        }
     });
+
+    $('.close').click(function () {
+        $('.success').toggle();
+    })
+
 
 
 });
-
-
-
 
 
 // Hide Header on on scroll down
